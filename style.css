@@ -1,0 +1,49 @@
+/*Zerando as margens e os preenchimentos da pagina e das bordas das caixas*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #EFEFEF;
+}
+
+/*Estamos criando um elemento antes da criação do body e atribuindo ele ao plano carteziano
+ z atras de todo texto*/
+body::before{
+  /*Quando queremos criar um elemento devemos passar o conteudo desse elemento nesse caso é vazio*/
+  content: '';
+
+  height: 436px;
+  width: 100%;
+  background-color: #535971;
+  
+  /*Quando criamos um elemento devemos definir a sua posição para que o objeto surga na tela*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  /*O z-index coloca a caixa que criamos atras de tudo pois o z é o eixo z no plano carteziano*/
+  z-index: -1;
+}
+
+/*Fontes usadas no projeto*/
+header h1, legend{
+  font-family: 'Staatliches', cursive;
+}
+
+header p{
+  font-family: 'Poppins', sans-serif;
+}
+
+/*Caracteristicas mais especificas das fontes*/
+header h1{
+  font-size: 48px;
+  color: white;
+}
+
+header p{
+  font-size: 20px;
+  color: white;
+}
