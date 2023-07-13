@@ -5,8 +5,13 @@
   box-sizing: border-box;
 }
 
+.page{
+  margin: 0 auto;
+  width: 750px;
+}
+
 body{
-  background-color: #EFEFEF;
+  background-color: #D9D9D9;
 }
 
 /*Estamos criando um elemento antes da criação do body e atribuindo ele ao plano carteziano
@@ -29,11 +34,11 @@ body::before{
 }
 
 /*Fontes usadas no projeto*/
-header h1, legend{
+header h1, .fieldset-wrapper legend, h2{
   font-family: 'Staatliches', cursive;
 }
 
-header p{
+header p, span{
   font-family: 'Poppins', sans-serif;
 }
 
@@ -41,9 +46,122 @@ header p{
 header h1{
   font-size: 48px;
   color: white;
+  margin-top: 142px;
 }
 
 header p{
   font-size: 20px;
   color: white;
+  margin-top: 18px;
+  margin-bottom: 58px;
+}
+
+.input-wrapper{
+  display: flex;
+  flex-direction: column; 
+}
+
+.input-wrapper span{
+  color: #C1BCCC;
+  font-size: 12px;
+  line-height: 20px;  
+}
+
+.input-wrapper label{
+  font-size: 14px;
+  line-height: 24px;
+  color: #4E4958;
+}
+
+.input-wrapper input{
+  border-radius: 8px;
+  height: 56px;
+  border: 1px solid var(--back-lines-in-white, #E6E6F0);
+  background: var(--shapes-02, #FAFAFC);
+  margin-bottom: 16px;
+  color: #4E4958;
+  padding: 8px;
+  font-size: 12px;
+}
+
+/*retirar a borda interna do input quando dele é selecionao*/
+.input-wrapper input:focus{
+  outline: none;
+}
+
+.fieldset-wrapper legend, h2{
+  color: #535971;
+  line-height: 34px;
+  font-size: 24px;
+}
+
+h2{
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+form{
+  background-color: white;
+  padding: 64px;
+  border-radius: 20px 20px 0px 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+fieldset{
+  border: none;
+}
+
+.columns-2{
+  gap:22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+
+.columns-3{
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.columns-3 input{
+  
+}
+
+footer{
+  background-color: #535971;
+  height: 160px;
+  display: flex;
+  flex-direction: column; 
+  margin-bottom: 100px;
+  
+}
+
+.button{
+  height: 56px;
+  border-radius: 20px;
+  background-color: #FF5374;
+  border: 0;
+  padding: 15px 40px;
+
+  /*Fonte do Botão*/
+  color: white;
+  line-height: 26px;
+  font-size: 20px;
+  margin-left: 71px;
+  margin-right: 71px;
+}
+
+.button:hover{
+  background-color: #ea0d39;
+  cursor: pointer;
+}
+
+.separator{
+  border: 1px solid #E6E6F0;
+  margin-top: 16px;
+  margin-bottom: 36px;
 }
