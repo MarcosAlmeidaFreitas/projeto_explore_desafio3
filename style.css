@@ -1,3 +1,6 @@
+/*https://www.figma.com/file/Ie0q80CqLXkSwQY7wuKtnh/Stage-03---Formul%C3%A1rio-intermedi%C3%A1rio-(Copy)?node-id=3%3A39&mode=dev*
+
+
 /*Zerando as margens e os preenchimentos da pagina e das bordas das caixas*/
 *{
   margin: 0;
@@ -84,7 +87,7 @@ header p{
   font-size: 12px;
 }
 
-/*retirar a borda interna do input quando dele é selecionao*/
+/*retirar a borda interna do input quando dele é selecionado */
 .input-wrapper input:focus{
   outline: none;
 }
@@ -97,6 +100,7 @@ header p{
   color: #535971;
   line-height: 34px;
   font-size: 24px;
+  margin-top: 30px;
 }
 
 h2{
@@ -112,10 +116,12 @@ form{
   flex-direction: column;
 }
 
+/*retirando a borda feia do fieldset*/
 fieldset{
   border: none;
 }
 
+/*Usado no campo de nome e sobrenome*/
 .columns-2{
   gap:22px;
   display: flex;
@@ -123,10 +129,14 @@ fieldset{
   align-items: center;
   align-content: center;
 }
+
+/*Colocando o input com o tamnaho de 50% da pagina*/
 .columns-2 input{
   width: 50vh;
 }
 
+
+/*usado para alinhar 3 itens numa mesma linha*/
 .columns-3{
   display: flex;
   align-content: center;
@@ -134,10 +144,14 @@ fieldset{
   gap: 10px;
 }
 
+/*Classe para colocar um input com o tamanho de 50% da pagina
+usado no input de data*/
 .input-50vh{
   width: 50vh;  
 }
 
+/*Classe para colocar um input com o tamanho de 50% da pagina
+usado no input de hora*/
 .input-25vh{
   width: 25vh;
 }
@@ -165,12 +179,20 @@ footer{
   margin-right: 71px;
 }
 
+/*Alterar quando passar o mouse em cima do botão o ponteiro 
+e a cor com uma transição de 0,5 segundos*/
 .button:hover{
   background-color: #ea0d39;
   cursor: pointer;
   transition: 0.5s;
 }
 
+/*Quando o input estiver invalido ele colocar a borda em vermelho*/
+input:required:focus:invalid{
+  border: 1px solid #FF5374;
+}
+
+/*Linhas para separar os elementos*/
 .separator{
   border: 1px solid #E6E6F0;
   margin-top: 16px;
